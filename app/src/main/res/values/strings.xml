@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Project Invictus</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_section1">Allenamento</string>
+    <string name="title_section2">Alimentazione</string>
+    <string name="title_section3">Anatomia</string>
+    <string name="title_section4">Video Tutorial</string>
+    <string name="title_section5">Sfide</string>
+    <string name="title_section6">News</string>
+    <string name="title_section7">Coaching</string>
+    <string name="back">Back</string>
+
+</resources>
