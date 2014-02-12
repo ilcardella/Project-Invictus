@@ -80,7 +80,7 @@ public class MainActivity extends FragmentActivity {
 	
 	@Override
 	protected void onRestoreInstanceState(Bundle savedInstanceState) {
-		// TODO aggiornare la view con i dati salvati
+		// TODO riprendere i dati salvati e aggiornare la view
 		super.onRestoreInstanceState(savedInstanceState);
 	}
 	
