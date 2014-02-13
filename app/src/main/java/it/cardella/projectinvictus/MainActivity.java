@@ -149,7 +149,6 @@ public class MainActivity extends FragmentActivity {
         private View rootView;
 		
 		public DummySectionFragment() {
-            setItemListAdapter();
 		}
 
 		@Override
@@ -162,41 +161,38 @@ public class MainActivity extends FragmentActivity {
 
             if(itemsHashMap.containsKey(URL_ARRAY[position])){
                 list = itemsHashMap.get(URL_ARRAY[position]);
-                //setItemListAdapter();
-                return rootView;
             }else{
                 GetXMLTask task = new GetXMLTask(){
                     @Override
                     protected void onPostExecute(List<Item> items) {
-                        list = items;
+                        //list = items;
                         itemsHashMap.put(URL_ARRAY[position], items);
-                        //setItemListAdapter();
+
                     }
                 };
                 task.execute(URL_ARRAY[position]);
             }
-            //setItemListAdapter();
+            setItemListAdapter();
 			return rootView;
 		}
 
         private void setItemListAdapter(){
-            if(list.size() > 0){
-                itemListAdapter = new ItemListAdapter(getActivity(), R.layout.listview_row_layout, list);
-                listView = (ListView) rootView.findViewById(R.id.feed_listView);
-                listView.setAdapter(itemListAdapter);
-                listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            itemListAdapter = new ItemListAdapter(getActivity(), R.layout.listview_row_layout, list);
+            listView = (ListView) rootView.findViewById(R.id.feed_listView);
+            listView.setAdapter(itemListAdapter);
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
-                    @Override
-                    public void onItemClick(AdapterView<?> parent, View view, int position,
-                                            long id) {
-                        // lancio una nuova activity con l'item
-                        Item item = (Item) parent.getItemAtPosition(position);
-                        Intent intent = new Intent(getActivity(), FeedDetailActivity.class);
-                        intent.putExtra("item", item);
-                        startActivity(intent);
-                    }
-                });
-            }
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position,
+                                        long id) {
+                    // lancio una nuova activity con l'item
+                    Item item = (Item) parent.getItemAtPosition(position);
+                    Intent intent = new Intent(getActivity(), FeedDetailActivity.class);
+                    intent.putExtra("item", item);
+                    startActivity(intent);
+                }
+            });
+
         }
 
         private class GetXMLTask extends
