@@ -240,11 +240,10 @@ public class MainActivity extends FragmentActivity {
 		@Override
 		protected Map<String, List<Item>> doInBackground(String... urls) {
 			Map<String, List<Item>> items = new HashMap<String, List<Item>>();
-			String xml = null;
 
 			for (String url : urls) {
 				currentUrl = url;
-				xml = getXmlFromUrl(url);
+				String xml = getXmlFromUrl(url);
 
 				InputStream stream = new ByteArrayInputStream(xml.getBytes());
 				items.put(currentUrl, RssReader.getItems(stream));
