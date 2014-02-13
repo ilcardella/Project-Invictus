@@ -145,7 +145,6 @@ public class MainActivity extends FragmentActivity {
 		public static final String ARG_SECTION_NUMBER = "section_number";
 		
 		private ItemListAdapter itemListAdapter;
-		private List<Item> list = new ArrayList<Item>();
 		private ListView listView;
         private int position;
         private View rootView;
@@ -164,28 +163,25 @@ public class MainActivity extends FragmentActivity {
 
             position = getArguments().getInt(ARG_SECTION_NUMBER);
 
-            if(itemsHashMap.containsKey(URL_ARRAY[position])){
-                list = itemsHashMap.get(URL_ARRAY[position]);
-                //setItemListAdapter(position);
-            }else{
+            if(!itemsHashMap.containsKey(URL_ARRAY[position])){
                 GetXMLTask task = new GetXMLTask(){
                     @Override
                     protected void onPostExecute(List<Item> items) {
-                        list = items;
                         itemsHashMap.put(URL_ARRAY[position], items);
-                        pBarLinearLayout.setVisibility(View.GONE);
                         setItemListAdapter(position);
                     }
                 };
                 task.execute(URL_ARRAY[position]);
+            }else{
+                setItemListAdapter(position);
             }
-            //setItemListAdapter(position);
-			return rootView;
+            return rootView;
 		}
 
         private void setItemListAdapter(int listPosition){
             itemListAdapter = new ItemListAdapter(getActivity(), R.layout.listview_row_layout, itemsHashMap.get(URL_ARRAY[position]));
             listView = (ListView) rootView.findViewById(R.id.feed_listView);
+            pBarLinearLayout.setVisibility(View.GONE);
             listView.setVisibility(View.VISIBLE);
             listView.setAdapter(itemListAdapter);
             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
