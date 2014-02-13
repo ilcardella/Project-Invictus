@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="6c0f11ae-3a83-4886-9136-3856bbaa28e3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project-Invictus.iml" afterPath="$PROJECT_DIR$/Project-Invictus.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Project-Invictus.iws" />
@@ -72,22 +75,32 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="245" column="23" selection-start="7638" selection-end="7638" vertical-scroll-proportion="0.42051283" vertical-offset="3375" max-vertical-offset="4607">
+            <state line="182" column="30" selection-start="5975" selection-end="5975" vertical-scroll-proportion="0.62601626" vertical-offset="2336" max-vertical-offset="3910">
               <folding>
-                <element signature="e#2182#2202#0" expanded="true" />
-                <element signature="e#3831#3837#0" expanded="true" />
-                <element signature="e#5353#5387#0" expanded="true" />
-                <element signature="e#5426#5460#0" expanded="true" />
-                <element signature="e#5499#5533#0" expanded="true" />
-                <element signature="e#5572#5606#0" expanded="true" />
-                <element signature="e#5645#5679#0" expanded="true" />
-                <element signature="e#5718#5752#0" expanded="true" />
-                <element signature="e#5791#5825#0" expanded="true" />
-                <element signature="e#6088#6094#0" expanded="true" />
-                <element signature="e#6866#7267#0" expanded="true" />
-                <element signature="e#7261#7262#0" expanded="true" />
-                <element signature="e#7551#7571#0" expanded="true" />
+                <element signature="e#2160#2180#0" expanded="true" />
+                <element signature="e#4005#4039#0" expanded="true" />
+                <element signature="e#4078#4112#0" expanded="true" />
+                <element signature="e#4151#4185#0" expanded="true" />
+                <element signature="e#4224#4258#0" expanded="true" />
+                <element signature="e#4297#4331#0" expanded="true" />
+                <element signature="e#4370#4404#0" expanded="true" />
+                <element signature="e#4443#4477#0" expanded="true" />
+                <element signature="e#4740#4746#0" expanded="true" />
+                <element signature="e#5462#5774#0" expanded="true" />
+                <element signature="e#5755#5756#0" expanded="true" />
+                <element signature="e#6267#6862#0" expanded="true" />
+                <element signature="e#6843#6844#0" expanded="true" />
+                <element signature="e#7167#7173#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ItemListAdapter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/util/ItemListAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="45" column="78" selection-start="1312" selection-end="1312" vertical-scroll-proportion="0.0" vertical-offset="396" max-vertical-offset="833">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -799,6 +812,8 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
     <property name="FullScreen" value="false" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="014E05DD0E01B017" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Nexus4" />
   </component>
   <component name="RunManager" selected="Android Application.app">
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
@@ -929,7 +944,7 @@
       <option name="DEPLOY" value="true" />
       <option name="ARTIFACT_NAME" value="" />
       <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="true" />
       <option name="PREFERRED_AVD" value="" />
       <option name="USE_COMMAND_LINE" value="true" />
       <option name="COMMAND_LINE" value="" />
@@ -939,6 +954,8 @@
       <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <RunnerSettings RunnerId="AndroidDebugRunner" />
+      <ConfigurationWrapper RunnerId="AndroidDebugRunner" />
       <method />
     </configuration>
     <list size="1">
@@ -980,39 +997,63 @@
       <created>1392230697789</created>
       <updated>1392230697789</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="prova di un commit&#10;Modifica di prova">
+      <created>1392298085723</created>
+      <updated>1392298085723</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289689" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3535188" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289689" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289689" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1029,7 +1070,8 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="prova di un commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="prova di un commit" />
+    <MESSAGE value="prova di un commit&#10;Modifica di prova" />
+    <option name="LAST_COMMIT_MESSAGE" value="prova di un commit&#10;Modifica di prova" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1039,19 +1081,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="41" column="29" selection-start="1511" selection-end="1511" vertical-scroll-proportion="0.0" vertical-offset="697" max-vertical-offset="4624">
           <folding>
-            <element signature="e#2182#2202#0" expanded="true" />
-            <element signature="e#3831#3837#0" expanded="true" />
-            <element signature="e#5353#5387#0" expanded="true" />
-            <element signature="e#5426#5460#0" expanded="true" />
-            <element signature="e#5499#5533#0" expanded="true" />
-            <element signature="e#5572#5606#0" expanded="true" />
-            <element signature="e#5645#5679#0" expanded="true" />
-            <element signature="e#5718#5752#0" expanded="true" />
-            <element signature="e#5791#5825#0" expanded="true" />
-            <element signature="e#6088#6094#0" expanded="true" />
-            <element signature="e#6866#7267#0" expanded="true" />
-            <element signature="e#7261#7262#0" expanded="true" />
-            <element signature="e#7551#7571#0" expanded="true" />
+            <element signature="e#2160#2180#0" expanded="true" />
+            <element signature="e#4005#4039#0" expanded="true" />
+            <element signature="e#4078#4112#0" expanded="true" />
+            <element signature="e#4151#4185#0" expanded="true" />
+            <element signature="e#4224#4258#0" expanded="true" />
+            <element signature="e#4297#4331#0" expanded="true" />
+            <element signature="e#4370#4404#0" expanded="true" />
+            <element signature="e#4443#4477#0" expanded="true" />
+            <element signature="e#4740#4746#0" expanded="true" />
+            <element signature="e#5462#5774#0" expanded="true" />
+            <element signature="e#5755#5756#0" expanded="true" />
+            <element signature="e#6267#6862#0" expanded="true" />
+            <element signature="e#6843#6844#0" expanded="true" />
+            <element signature="e#7167#7173#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1071,23 +1114,45 @@
         <state line="22" column="9" selection-start="270" selection-end="270" vertical-scroll-proportion="0.63931626" vertical-offset="0" max-vertical-offset="585" />
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_45/src.zip!/java/util/concurrent/FutureTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="221" column="0" selection-start="7445" selection-end="7445" vertical-scroll-proportion="0.0" vertical-offset="3141" max-vertical-offset="7735">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/util/ItemListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="78" selection-start="1312" selection-end="1312" vertical-scroll-proportion="0.0" vertical-offset="396" max-vertical-offset="833">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/extras/android/m2repository/com/android/support/support-v4/19.0.1/support-v4-19.0.1.jar!/android/support/v4/app/FragmentStatePagerAdapter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="0" selection-start="1764" selection-end="1764" vertical-scroll-proportion="0.70348835" vertical-offset="319" max-vertical-offset="663">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="245" column="23" selection-start="7638" selection-end="7638" vertical-scroll-proportion="0.42051283" vertical-offset="3375" max-vertical-offset="4607">
+        <state line="182" column="30" selection-start="5975" selection-end="5975" vertical-scroll-proportion="0.62601626" vertical-offset="2336" max-vertical-offset="3910">
           <folding>
-            <element signature="e#2182#2202#0" expanded="true" />
-            <element signature="e#3831#3837#0" expanded="true" />
-            <element signature="e#5353#5387#0" expanded="true" />
-            <element signature="e#5426#5460#0" expanded="true" />
-            <element signature="e#5499#5533#0" expanded="true" />
-            <element signature="e#5572#5606#0" expanded="true" />
-            <element signature="e#5645#5679#0" expanded="true" />
-            <element signature="e#5718#5752#0" expanded="true" />
-            <element signature="e#5791#5825#0" expanded="true" />
-            <element signature="e#6088#6094#0" expanded="true" />
-            <element signature="e#6866#7267#0" expanded="true" />
-            <element signature="e#7261#7262#0" expanded="true" />
-            <element signature="e#7551#7571#0" expanded="true" />
+            <element signature="e#2160#2180#0" expanded="true" />
+            <element signature="e#4005#4039#0" expanded="true" />
+            <element signature="e#4078#4112#0" expanded="true" />
+            <element signature="e#4151#4185#0" expanded="true" />
+            <element signature="e#4224#4258#0" expanded="true" />
+            <element signature="e#4297#4331#0" expanded="true" />
+            <element signature="e#4370#4404#0" expanded="true" />
+            <element signature="e#4443#4477#0" expanded="true" />
+            <element signature="e#4740#4746#0" expanded="true" />
+            <element signature="e#5462#5774#0" expanded="true" />
+            <element signature="e#5755#5756#0" expanded="true" />
+            <element signature="e#6267#6862#0" expanded="true" />
+            <element signature="e#6843#6844#0" expanded="true" />
+            <element signature="e#7167#7173#0" expanded="true" />
           </folding>
         </state>
       </provider>

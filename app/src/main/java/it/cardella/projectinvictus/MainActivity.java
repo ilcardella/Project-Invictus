@@ -13,7 +13,6 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
-import it.cardella.projectinvictus.R;
 import it.cardella.projectinvictus.data.Item;
 import it.cardella.projectinvictus.util.ItemListAdapter;
 import it.cardella.projectinvictus.util.RssReader;
@@ -52,7 +51,7 @@ public class MainActivity extends FragmentActivity {
 
 	ProgressDialog dialog;
 	
-	Map<String, List<Item>> feedHashMap = new HashMap<String, List<Item>>();
+	private static Map<String, List<Item>> itemsHashMap = new HashMap<String, List<Item>>();
 	
 	ItemListAdapter itemListAdapter;
 
@@ -65,16 +64,15 @@ public class MainActivity extends FragmentActivity {
 		dialog.setMessage("Downloading...");
 		dialog.setCancelable(false);
 		dialog.setCanceledOnTouchOutside(false);
-		dialog.show();
-		
-		// TODO lanciare un task per ogni sezione
-		GetXMLTask task = new GetXMLTask();
-		task.execute(URL_ARRAY);
+		//dialog.show();
 
 		// Create the adapter that will return a fragment for each of the three
 		// primary sections of the app.
 		mSectionsPagerAdapter = new SectionsPagerAdapter(
 				getSupportFragmentManager());
+
+        mViewPager = (ViewPager) findViewById(R.id.pager);
+        mViewPager.setAdapter(mSectionsPagerAdapter);
 
 	}
 	
@@ -106,55 +104,9 @@ public class MainActivity extends FragmentActivity {
 		@Override
 		public Fragment getItem(int position) {
 			Fragment fragment = new DummySectionFragment();
-			Bundle args = new Bundle();
-			args.putInt(DummySectionFragment.ARG_SECTION_NUMBER, position + 1);
-
-			if (!feedHashMap.isEmpty()) {
-				List<Item> list = new ArrayList<Item>();
-				switch (position) {
-				case 0:
-					list = feedHashMap.get(URL_ARRAY[0]);
-					for (int i = 0; i < list.size(); i++)
-						args.putSerializable("item" + i, list.get(i));
-					break;
-				case 1:
-					list = feedHashMap.get(URL_ARRAY[1]);
-					for (int i = 0; i < list.size(); i++)
-						args.putSerializable("item" + i, list.get(i));
-					break;
-				case 2:
-					list = feedHashMap.get(URL_ARRAY[2]);
-					for (int i = 0; i < list.size(); i++)
-						args.putSerializable("item" + i, list.get(i));
-					break;
-				case 3:
-					list = feedHashMap.get(URL_ARRAY[3]);
-					for (int i = 0; i < list.size(); i++)
-						args.putSerializable("item" + i, list.get(i));
-					break;
-				case 4:
-					list = feedHashMap.get(URL_ARRAY[4]);
-					for (int i = 0; i < list.size(); i++)
-						args.putSerializable("item" + i, list.get(i));
-					break;
-				case 5:
-					list = feedHashMap.get(URL_ARRAY[5]);
-					for (int i = 0; i < list.size(); i++)
-						args.putSerializable("item" + i, list.get(i));
-					break;
-				case 6:
-					list = feedHashMap.get(URL_ARRAY[6]);
-					for (int i = 0; i < list.size(); i++)
-						args.putSerializable("item" + i, list.get(i));
-					break;
-				default:
-					System.out.println("ERROR. Position overflow");
-					break;
-				}
-			}
-
+            Bundle args = new Bundle();
+			args.putInt(DummySectionFragment.ARG_SECTION_NUMBER, position);
 			fragment.setArguments(args);
-
 			return fragment;
 		}
 
@@ -193,105 +145,111 @@ public class MainActivity extends FragmentActivity {
 		private ItemListAdapter itemListAdapter;
 		private List<Item> list = new ArrayList<Item>();
 		private ListView listView;
+        private int position;
+        private View rootView;
 		
 		public DummySectionFragment() {
+            setItemListAdapter();
 		}
 
 		@Override
 		public View onCreateView(LayoutInflater inflater, ViewGroup container,
 				Bundle savedInstanceState) {
-			// genero la lista degli Item che sono stati passati al fragment
-			for (int i = 0; i < getArguments().size(); i++) {
-				Item item = (Item) getArguments().getSerializable("item" + i);
-				if (item != null) {
-					list.add(item);
-				}
-			}
-						
-			View rootView = inflater.inflate(R.layout.fragment_main_dummy,
-					container, false);
 
-			itemListAdapter = new ItemListAdapter(getActivity(), R.layout.listview_row_layout, list);
-			listView = (ListView) rootView.findViewById(R.id.feed_listView);
-			listView.setAdapter(itemListAdapter);
-			listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            rootView = inflater.inflate(R.layout.fragment_main_dummy,
+                    container, false);
+            position = getArguments().getInt(ARG_SECTION_NUMBER);
 
-				@Override
-				public void onItemClick(AdapterView<?> parent, View view, int position,
-						long id) {
-					// lancio una nuova activity con l'item
-					Item item = (Item) parent.getItemAtPosition(position);
-					Intent intent = new Intent(getActivity(), FeedDetailActivity.class);
-					intent.putExtra("item", item);
-					startActivity(intent);
-				}
-			});
-
+            if(itemsHashMap.containsKey(URL_ARRAY[position])){
+                list = itemsHashMap.get(URL_ARRAY[position]);
+                //setItemListAdapter();
+                return rootView;
+            }else{
+                GetXMLTask task = new GetXMLTask(){
+                    @Override
+                    protected void onPostExecute(List<Item> items) {
+                        list = items;
+                        itemsHashMap.put(URL_ARRAY[position], items);
+                        //setItemListAdapter();
+                    }
+                };
+                task.execute(URL_ARRAY[position]);
+            }
+            //setItemListAdapter();
 			return rootView;
 		}
 
-	}
+        private void setItemListAdapter(){
+            if(list.size() > 0){
+                itemListAdapter = new ItemListAdapter(getActivity(), R.layout.listview_row_layout, list);
+                listView = (ListView) rootView.findViewById(R.id.feed_listView);
+                listView.setAdapter(itemListAdapter);
+                listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
-	private class GetXMLTask extends
-			AsyncTask<String, Void, Map<String, List<Item>>> {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position,
+                                            long id) {
+                        // lancio una nuova activity con l'item
+                        Item item = (Item) parent.getItemAtPosition(position);
+                        Intent intent = new Intent(getActivity(), FeedDetailActivity.class);
+                        intent.putExtra("item", item);
+                        startActivity(intent);
+                    }
+                });
+            }
+        }
 
-		private String currentUrl = "";
+        private class GetXMLTask extends
+                AsyncTask<String, Void, List<Item>> {
 
-		@Override
-		protected Map<String, List<Item>> doInBackground(String... urls) {
-			Map<String, List<Item>> items = new HashMap<String, List<Item>>();
+            private String currentUrl = "";
 
-			for (String url : urls) {
-				currentUrl = url;
-				String xml = getXmlFromUrl(url);
+            @Override
+            protected List<Item> doInBackground(String... urls) {
+                List<Item> items = new ArrayList<Item>();
 
-				InputStream stream = new ByteArrayInputStream(xml.getBytes());
-				items.put(currentUrl, RssReader.getItems(stream));
-			}
+                for (String url : urls) {
+                    currentUrl = url;
+                    String xml = getXmlFromUrl(url);
 
-			return items;
-		}
+                    InputStream stream = new ByteArrayInputStream(xml.getBytes());
+                    items = RssReader.getItems(stream);
+                }
 
-		@Override
-		protected void onPostExecute(Map<String, List<Item>> items) {
-			feedHashMap = items;
-			updateUI();
-		}
+                return items;
+            }
 
-		private String getXmlFromUrl(String urlString) {
-			StringBuffer output = new StringBuffer("");
-			try {
-				InputStream stream = null;
-				URL url = new URL(urlString);
-				URLConnection connection = url.openConnection();
+            private String getXmlFromUrl(String urlString) {
+                StringBuffer output = new StringBuffer("");
+                try {
+                    InputStream stream = null;
+                    URL url = new URL(urlString);
+                    URLConnection connection = url.openConnection();
 
-				HttpURLConnection httpConnection = (HttpURLConnection) connection;
-				httpConnection.setRequestMethod("GET");
-				httpConnection.connect();
+                    HttpURLConnection httpConnection = (HttpURLConnection) connection;
+                    httpConnection.setRequestMethod("GET");
+                    httpConnection.connect();
 
-				if (httpConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
-					stream = httpConnection.getInputStream();
+                    if (httpConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
+                        stream = httpConnection.getInputStream();
 
-					BufferedReader buffer = new BufferedReader(
-							new InputStreamReader(stream));
-					String s = "";
-					while ((s = buffer.readLine()) != null)
-						output.append(s);
-				}
+                        BufferedReader buffer = new BufferedReader(
+                                new InputStreamReader(stream));
+                        String s = "";
+                        while ((s = buffer.readLine()) != null)
+                            output.append(s);
+                    }
 
-			} catch (Exception ex) {
-				// TODO gestire la non connessione a internet
-				ex.printStackTrace();
-			}
-			return output.toString();
+                } catch (Exception ex) {
+                    // TODO gestire la non connessione a internet
+                    ex.printStackTrace();
+                }
+                return output.toString();
 
-		}
-	}// End of AsycTask class
+            }
+        }// End of AsycTask class
 
-	private void updateUI() {
-		mViewPager = (ViewPager) findViewById(R.id.pager);
-		mViewPager.setAdapter(mSectionsPagerAdapter);
-		dialog.dismiss();
-	}
+	} // Fine classe Fragment
+
 
 }// End of Activity
