@@ -31,7 +31,9 @@ import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 
 public class MainActivity extends FragmentActivity {
 
@@ -147,6 +149,7 @@ public class MainActivity extends FragmentActivity {
 		private ListView listView;
         private int position;
         private View rootView;
+        private LinearLayout pBarLinearLayout;
 		
 		public DummySectionFragment() {
 		}
@@ -157,29 +160,33 @@ public class MainActivity extends FragmentActivity {
 
             rootView = inflater.inflate(R.layout.fragment_main_dummy,
                     container, false);
+            pBarLinearLayout = (LinearLayout) rootView.findViewById(R.id.progressBarLinearLayout);
+
             position = getArguments().getInt(ARG_SECTION_NUMBER);
 
             if(itemsHashMap.containsKey(URL_ARRAY[position])){
                 list = itemsHashMap.get(URL_ARRAY[position]);
+                //setItemListAdapter(position);
             }else{
                 GetXMLTask task = new GetXMLTask(){
                     @Override
                     protected void onPostExecute(List<Item> items) {
                         list = items;
                         itemsHashMap.put(URL_ARRAY[position], items);
-                        setItemListAdapter();
+                        pBarLinearLayout.setVisibility(View.GONE);
+                        setItemListAdapter(position);
                     }
                 };
                 task.execute(URL_ARRAY[position]);
             }
-            setItemListAdapter();
+            //setItemListAdapter(position);
 			return rootView;
 		}
 
-        private void setItemListAdapter(){
-            if(list!=null){
-            itemListAdapter = new ItemListAdapter(getActivity(), R.layout.listview_row_layout, list);
+        private void setItemListAdapter(int listPosition){
+            itemListAdapter = new ItemListAdapter(getActivity(), R.layout.listview_row_layout, itemsHashMap.get(URL_ARRAY[position]));
             listView = (ListView) rootView.findViewById(R.id.feed_listView);
+            listView.setVisibility(View.VISIBLE);
             listView.setAdapter(itemListAdapter);
             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
@@ -193,8 +200,6 @@ public class MainActivity extends FragmentActivity {
                     startActivity(intent);
                 }
             });
-            }
-
         }
 
         private class GetXMLTask extends
