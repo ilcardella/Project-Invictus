@@ -165,9 +165,9 @@ public class MainActivity extends FragmentActivity {
                 GetXMLTask task = new GetXMLTask(){
                     @Override
                     protected void onPostExecute(List<Item> items) {
-                        //list = items;
+                        list = items;
                         itemsHashMap.put(URL_ARRAY[position], items);
-
+                        setItemListAdapter();
                     }
                 };
                 task.execute(URL_ARRAY[position]);
@@ -177,6 +177,7 @@ public class MainActivity extends FragmentActivity {
 		}
 
         private void setItemListAdapter(){
+            if(list!=null){
             itemListAdapter = new ItemListAdapter(getActivity(), R.layout.listview_row_layout, list);
             listView = (ListView) rootView.findViewById(R.id.feed_listView);
             listView.setAdapter(itemListAdapter);
@@ -192,6 +193,7 @@ public class MainActivity extends FragmentActivity {
                     startActivity(intent);
                 }
             });
+            }
 
         }
 
