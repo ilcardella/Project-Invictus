@@ -31,8 +31,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c0f11ae-3a83-4886-9136-3856bbaa28e3" name="Default" comment="">
+      <change type="DELETED" beforePath="C:\Users\Fisso-PC\AndroidStudioProjects\Project-Invictus\app\src\main\java\it\cardella\projectinvictus\data\Items.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/data/Item.java" afterPath="$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/data/Item.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/util/ItemListAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/util/ItemListAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/listview_row_layout.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/listview_row_layout.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/util/XMLHandler.java" afterPath="$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/util/XMLHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Project-Invictus.iws" />
@@ -97,10 +100,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="230" column="9" selection-start="7993" selection-end="7993" vertical-scroll-proportion="0.0" vertical-offset="3315" max-vertical-offset="4420">
+            <state line="247" column="94" selection-start="8631" selection-end="8631" vertical-scroll-proportion="0.4282116" vertical-offset="3366" max-vertical-offset="4437">
               <folding>
                 <element signature="e#2393#2413#0" expanded="true" />
                 <element signature="e#3339#3356#0" expanded="true" />
@@ -115,36 +118,6 @@
                 <element signature="e#7947#7948#0" expanded="true" />
                 <element signature="e#8227#8233#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="listview_row_layout.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/listview_row_layout.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="47" selection-start="963" selection-end="963" vertical-scroll-proportion="-12.92" vertical-offset="136" max-vertical-offset="663">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ItemListAdapter.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/util/ItemListAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="95" selection-start="1474" selection-end="1474" vertical-scroll-proportion="0.77329975" vertical-offset="322" max-vertical-offset="833">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Items.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/data/Items.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="13" selection-start="85" selection-end="85" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -822,9 +795,11 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/FeedDetailActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/listview_row_layout.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/data/Item.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/util/ItemListAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/util/XMLHandler.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -1033,6 +1008,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project-Invictus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project-Invictus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projectinvictus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1301,7 +1310,11 @@
       <created>1392410431246</created>
       <updated>1392410431246</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="aggiunta l'imageview nella riga della listview">
+      <created>1392411512850</created>
+      <updated>1392411512850</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1341,7 +1354,7 @@
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32839838" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4306864" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4306864" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289689" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1385,7 +1398,8 @@
     <MESSAGE value="aggiunto menu About" />
     <MESSAGE value="tolto metodo inutilizzato updateUI()" />
     <MESSAGE value="cancellata classe Channel non utilizzata&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="cancellata classe Channel non utilizzata&#10;" />
+    <MESSAGE value="aggiunta l'imageview nella riga della listview" />
+    <option name="LAST_COMMIT_MESSAGE" value="aggiunta l'imageview nella riga della listview" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1624,20 +1638,6 @@
         <state line="34" column="0" selection-start="1764" selection-end="1764" vertical-scroll-proportion="0.70348835" vertical-offset="319" max-vertical-offset="663" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/util/RssReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="29" selection-start="439" selection-end="439" vertical-scroll-proportion="0.13457076" vertical-offset="146" max-vertical-offset="731">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/util/XMLHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="22" selection-start="1294" selection-end="1294" vertical-scroll-proportion="0.0" vertical-offset="521" max-vertical-offset="2346">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-19/android.jar!/android/os/Binder.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="48" column="0" selection-start="2057" selection-end="2057" vertical-scroll-proportion="0.75061125" vertical-offset="492" max-vertical-offset="901" />
@@ -1692,20 +1692,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/data/Items.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="13" selection-start="85" selection-end="85" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/data/Item.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="13" selection-start="86" selection-end="86" vertical-scroll-proportion="0.09483961" vertical-offset="0" max-vertical-offset="765">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/FeedDetailActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="47" column="66" selection-start="1627" selection-end="1627" vertical-scroll-proportion="0.5566751" vertical-offset="153" max-vertical-offset="1802">
@@ -1713,9 +1699,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/data/Item.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="0" selection-start="562" selection-end="562" vertical-scroll-proportion="0.0" vertical-offset="249" max-vertical-offset="901">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#480#481#0" expanded="true" />
+            <element signature="e#496#497#0" expanded="true" />
+            <element signature="e#538#539#0" expanded="true" />
+            <element signature="e#560#561#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/util/ItemListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="44" selection-start="1721" selection-end="1721" vertical-scroll-proportion="0.60201514" vertical-offset="475" max-vertical-offset="969">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/listview_row_layout.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="47" selection-start="963" selection-end="963" vertical-scroll-proportion="0.8682796" vertical-offset="136" max-vertical-offset="663">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/util/XMLHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="88" column="19" selection-start="2460" selection-end="2460" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1751">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/util/RssReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="17" selection-start="292" selection-end="292" vertical-scroll-proportion="0.17128463" vertical-offset="0" max-vertical-offset="731">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="230" column="9" selection-start="7993" selection-end="7993" vertical-scroll-proportion="0.0" vertical-offset="2805" max-vertical-offset="4420">
+        <state line="247" column="94" selection-start="8631" selection-end="8631" vertical-scroll-proportion="0.4282116" vertical-offset="3366" max-vertical-offset="4437">
           <folding>
             <element signature="e#2393#2413#0" expanded="true" />
             <element signature="e#3339#3356#0" expanded="true" />
@@ -1730,23 +1760,6 @@
             <element signature="e#7947#7948#0" expanded="true" />
             <element signature="e#8227#8233#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/listview_row_layout.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="47" selection-start="963" selection-end="963" vertical-scroll-proportion="-12.92" vertical-offset="136" max-vertical-offset="663">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/util/ItemListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="95" selection-start="1474" selection-end="1474" vertical-scroll-proportion="0.77329975" vertical-offset="322" max-vertical-offset="833">
-          <folding />
         </state>
       </provider>
     </entry>

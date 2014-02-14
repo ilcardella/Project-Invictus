@@ -245,6 +245,7 @@ public class MainActivity extends FragmentActivity {
                     items = RssReader.getItems(stream);
                 }
 
+                // TODO prima di ritornare gli item bisogna impostare le immagini ad ogni item
                 return items;
             }
 

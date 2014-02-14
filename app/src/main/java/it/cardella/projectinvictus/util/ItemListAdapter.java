@@ -7,11 +7,13 @@ import it.cardella.projectinvictus.data.Item;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class ItemListAdapter extends ArrayAdapter<Item> {
@@ -41,6 +43,8 @@ public class ItemListAdapter extends ArrayAdapter<Item> {
 					.findViewById(R.id.title_textView);
 			TextView description = (TextView) view
 					.findViewById(R.id.description_textView);
+            ImageView image = (ImageView) view
+                    .findViewById(R.id.imageView);
 			
 			if (title != null) {
 				title.setTextColor(context.getResources().getColor(R.color.DarkRed));
@@ -49,6 +53,12 @@ public class ItemListAdapter extends ArrayAdapter<Item> {
 			if (description != null) {
 				description.setText(Html.fromHtml(item.getDescription().substring(0, 197)+"..."));
 			}
+            if(image != null){
+                Bitmap img = item.getImage();
+                if(img != null){
+                    image.setImageBitmap(img);
+                }
+            }
 		}
 		return view;
 	}

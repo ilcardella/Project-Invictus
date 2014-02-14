@@ -89,20 +89,7 @@ public class XMLHandler extends DefaultHandler {
 			rssItems.add(currentItem);
 			currentItem = null;
 		}
-/*
-		if ("item".equals(qName)) {
-			rssItems.add(currentItem);
-			currentItem = null;
-		} else if ("title".equals(qName)) {
-			parsingTitle = false;
-		} else if ("link".equals(qName)) {
-			parsingLink = false;
-		} else if ("description".equals(qName)) {
-			parsingDescription = false;
-		} else if ("content:encoded".equals(qName)) {
-			parsingContent = false;
-		}
-*/		
+
 	}
 
 	// Characters method fills current Item object with data when title and
@@ -114,29 +101,7 @@ public class XMLHandler extends DefaultHandler {
 		for (int i=start; i<start+length; i++) {
             strCharacters.append(ch[i]);
         }
-/*
-		if (parsingTitle) {
-			if (currentItem != null){
-				currentItem.setTitle(new String(ch, start, length));
-				parsingTitle = false;
-			}
-		} else if (parsingLink) {
-			if (currentItem != null) {
-				currentItem.setLink(new String(ch, start, length));
-				parsingLink = false;
-			}
-		} else if (parsingDescription){
-			if(currentItem != null){
-				currentItem.setDescription(new String(ch, start, length));
-				parsingDescription = false;
-			}
-		} else if (parsingContent){
-			if(currentItem != null){
-				currentItem.setContent(new String(ch, start, length));
-				parsingContent = false; // Se commento, salva solo la parte finale dell'articolo
-			}
-		}
-*/
+
 	}
 
 } // End of class
