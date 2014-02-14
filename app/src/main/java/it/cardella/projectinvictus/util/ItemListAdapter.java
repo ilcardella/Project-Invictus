@@ -43,7 +43,7 @@ public class ItemListAdapter extends ArrayAdapter<Item> {
 					.findViewById(R.id.description_textView);
 			
 			if (title != null) {
-				title.setTextColor(context.getResources().getColor(R.color.Coral));
+				title.setTextColor(context.getResources().getColor(R.color.DarkRed));
 				title.setText(item.getTitle());
 			}
 			if (description != null) {

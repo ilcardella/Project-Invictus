@@ -45,7 +45,7 @@ public class FeedDetailActivity extends Activity implements ImageGetter{
 		
 		Item item = (Item) getIntent().getExtras().getSerializable("item");
 		
-		title.setTextColor(getResources().getColor(R.color.Coral));
+		title.setTextColor(getResources().getColor(R.color.DarkRed));
 		title.setText(item.getTitle());
 		
 		//contentWV.setMovementMethod(new ScrollingMovementMethod());
