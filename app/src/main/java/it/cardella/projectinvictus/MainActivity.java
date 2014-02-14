@@ -139,6 +139,7 @@ public class MainActivity extends FragmentActivity {
         int position;
         View rootView;
         LinearLayout pBarLinearLayout;
+        boolean running_task = false;
 		
 		public DummySectionFragment() {
 		}
@@ -149,13 +150,9 @@ public class MainActivity extends FragmentActivity {
             position = getArguments().getInt(ARG_SECTION_NUMBER);
 
             if(!itemsHashMap.containsKey(URL_ARRAY[position])){
-                GetXMLTask task = new GetXMLTask(){
-                    @Override
-                    protected void onPostExecute(List<Item> items) {
-                        itemsHashMap.put(URL_ARRAY[position], items);
-                    }
-                };
+                GetXMLTask task = new GetXMLTask();
                 task.execute(URL_ARRAY[position]);
+                running_task = true;
             }
         }
 
@@ -167,29 +164,37 @@ public class MainActivity extends FragmentActivity {
                     container, false);
             pBarLinearLayout = (LinearLayout) rootView.findViewById(R.id.progressBarLinearLayout);
             listView = (ListView) rootView.findViewById(R.id.feed_listView);
+            setItemListAdapter();
 
-            if(itemsHashMap.containsKey(URL_ARRAY[position])){
-                setItemListAdapter(position);
-                updateUI();
-            }
             return rootView;
 		}
 
-        private void setItemListAdapter(int listPosition){
-            itemListAdapter = new ItemListAdapter(getActivity(), R.layout.listview_row_layout, itemsHashMap.get(URL_ARRAY[position]));
-            listView.setAdapter(itemListAdapter);
-            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        private void setItemListAdapter(){
+            if(running_task)
+            {
+                listView.setVisibility(View.GONE);
+                pBarLinearLayout.setVisibility(View.VISIBLE);
+            }
+            else
+            {
+                pBarLinearLayout.setVisibility(View.GONE);
+                listView.setVisibility(View.VISIBLE);
+                itemListAdapter = new ItemListAdapter(getActivity(), R.layout.listview_row_layout, itemsHashMap.get(URL_ARRAY[position]));
+                listView.setAdapter(itemListAdapter);
+                listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
-                @Override
-                public void onItemClick(AdapterView<?> parent, View view, int position,
-                                        long id) {
-                    // lancio una nuova activity con l'item
-                    Item item = (Item) parent.getItemAtPosition(position);
-                    Intent intent = new Intent(getActivity(), FeedDetailActivity.class);
-                    intent.putExtra("item", item);
-                    startActivity(intent);
-                }
-            });
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position,
+                                            long id) {
+                        // lancio una nuova activity con l'item
+                        Item item = (Item) parent.getItemAtPosition(position);
+                        Intent intent = new Intent(getActivity(), FeedDetailActivity.class);
+                        intent.putExtra("item", item);
+                        startActivity(intent);
+                    }
+                });
+            }
+
         }
 
         private void updateUI(){
@@ -200,14 +205,12 @@ public class MainActivity extends FragmentActivity {
         private class GetXMLTask extends
                 AsyncTask<String, Void, List<Item>> {
 
-            private String currentUrl = "";
-
             @Override
             protected List<Item> doInBackground(String... urls) {
                 List<Item> items = new ArrayList<Item>();
 
                 for (String url : urls) {
-                    currentUrl = url;
+                    String currentUrl = url;
                     String xml = getXmlFromUrl(url);
 
                     InputStream stream = new ByteArrayInputStream(xml.getBytes());
@@ -215,6 +218,16 @@ public class MainActivity extends FragmentActivity {
                 }
 
                 return items;
+            }
+
+            @Override
+            protected void onPostExecute(List<Item> items) {
+                itemsHashMap.put(URL_ARRAY[position], items);
+                running_task = false;
+                if(getActivity()!=null)
+                {
+                    setItemListAdapter();
+                }
             }
 
             private String getXmlFromUrl(String urlString) {
@@ -239,7 +252,7 @@ public class MainActivity extends FragmentActivity {
                     }
 
                 } catch (Exception ex) {
-                    // TODO gestire la non connessione a internet
+                    // TODO gestire la connessione a internet assente
                     ex.printStackTrace();
                 }
                 return output.toString();
