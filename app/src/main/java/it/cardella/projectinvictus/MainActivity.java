@@ -230,11 +230,6 @@ public class MainActivity extends FragmentActivity {
 
         }
 
-        private void updateUI(){
-            pBarLinearLayout.setVisibility(View.GONE);
-            listView.setVisibility(View.VISIBLE);
-        }
-
         private class GetXMLTask extends
                 AsyncTask<String, Void, List<Item>> {
 

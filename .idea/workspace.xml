@@ -32,8 +32,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6c0f11ae-3a83-4886-9136-3856bbaa28e3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/menu/main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/menu/main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Project-Invictus.iws" />
@@ -101,7 +99,7 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="96" column="38" selection-start="3590" selection-end="3590" vertical-scroll-proportion="0.8564232" vertical-offset="629" max-vertical-offset="4505">
+            <state line="230" column="9" selection-start="7993" selection-end="7993" vertical-scroll-proportion="0.59949625" vertical-offset="3009" max-vertical-offset="4420">
               <folding>
                 <element signature="e#2393#2413#0" expanded="true" />
                 <element signature="e#3339#3356#0" expanded="true" />
@@ -114,7 +112,7 @@
                 <element signature="e#4739#4773#0" expanded="true" />
                 <element signature="e#7371#7966#0" expanded="true" />
                 <element signature="e#7947#7948#0" expanded="true" />
-                <element signature="e#8376#8382#0" expanded="true" />
+                <element signature="e#8227#8233#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1332,7 +1330,11 @@
       <created>1392393149701</created>
       <updated>1392393149701</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="aggiunto menu About">
+      <created>1392410257720</created>
+      <updated>1392410257720</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1413,7 +1415,8 @@
     <MESSAGE value="sto cercando di gestire la connessione a internet nel caso non ci sia" />
     <MESSAGE value="cambiati i colori" />
     <MESSAGE value="finita la gestione della connessione assente. ora bisogna concentrarsi sulla webview e sui video" />
-    <option name="LAST_COMMIT_MESSAGE" value="finita la gestione della connessione assente. ora bisogna concentrarsi sulla webview e sui video" />
+    <MESSAGE value="aggiunto menu About" />
+    <option name="LAST_COMMIT_MESSAGE" value="aggiunto menu About" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1434,7 +1437,7 @@
             <element signature="e#4739#4773#0" expanded="true" />
             <element signature="e#7371#7966#0" expanded="true" />
             <element signature="e#7947#7948#0" expanded="true" />
-            <element signature="e#8376#8382#0" expanded="true" />
+            <element signature="e#8227#8233#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1454,7 +1457,7 @@
             <element signature="e#4739#4773#0" expanded="true" />
             <element signature="e#7371#7966#0" expanded="true" />
             <element signature="e#7947#7948#0" expanded="true" />
-            <element signature="e#8376#8382#0" expanded="true" />
+            <element signature="e#8227#8233#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1474,7 +1477,7 @@
             <element signature="e#4739#4773#0" expanded="true" />
             <element signature="e#7371#7966#0" expanded="true" />
             <element signature="e#7947#7948#0" expanded="true" />
-            <element signature="e#8376#8382#0" expanded="true" />
+            <element signature="e#8227#8233#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1494,7 +1497,7 @@
             <element signature="e#4739#4773#0" expanded="true" />
             <element signature="e#7371#7966#0" expanded="true" />
             <element signature="e#7947#7948#0" expanded="true" />
-            <element signature="e#8376#8382#0" expanded="true" />
+            <element signature="e#8227#8233#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1514,7 +1517,7 @@
             <element signature="e#4739#4773#0" expanded="true" />
             <element signature="e#7371#7966#0" expanded="true" />
             <element signature="e#7947#7948#0" expanded="true" />
-            <element signature="e#8376#8382#0" expanded="true" />
+            <element signature="e#8227#8233#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1534,7 +1537,7 @@
             <element signature="e#4739#4773#0" expanded="true" />
             <element signature="e#7371#7966#0" expanded="true" />
             <element signature="e#7947#7948#0" expanded="true" />
-            <element signature="e#8376#8382#0" expanded="true" />
+            <element signature="e#8227#8233#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1571,7 +1574,7 @@
             <element signature="e#4739#4773#0" expanded="true" />
             <element signature="e#7371#7966#0" expanded="true" />
             <element signature="e#7947#7948#0" expanded="true" />
-            <element signature="e#8376#8382#0" expanded="true" />
+            <element signature="e#8227#8233#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1622,7 +1625,7 @@
             <element signature="e#4739#4773#0" expanded="true" />
             <element signature="e#7371#7966#0" expanded="true" />
             <element signature="e#7947#7948#0" expanded="true" />
-            <element signature="e#8376#8382#0" expanded="true" />
+            <element signature="e#8227#8233#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1758,7 +1761,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="38" selection-start="3590" selection-end="3590" vertical-scroll-proportion="0.8564232" vertical-offset="629" max-vertical-offset="4505">
+        <state line="230" column="9" selection-start="7993" selection-end="7993" vertical-scroll-proportion="0.59949625" vertical-offset="3009" max-vertical-offset="4420">
           <folding>
             <element signature="e#2393#2413#0" expanded="true" />
             <element signature="e#3339#3356#0" expanded="true" />
@@ -1771,7 +1774,7 @@
             <element signature="e#4739#4773#0" expanded="true" />
             <element signature="e#7371#7966#0" expanded="true" />
             <element signature="e#7947#7948#0" expanded="true" />
-            <element signature="e#8376#8382#0" expanded="true" />
+            <element signature="e#8227#8233#0" expanded="true" />
           </folding>
         </state>
       </provider>
