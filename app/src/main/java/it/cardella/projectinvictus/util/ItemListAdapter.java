@@ -45,14 +45,22 @@ public class ItemListAdapter extends ArrayAdapter<Item> {
 					.findViewById(R.id.description_textView);
             ImageView image = (ImageView) view
                     .findViewById(R.id.imageView);
-			
+
+            // setto il titolo
 			if (title != null) {
 				title.setTextColor(context.getResources().getColor(R.color.DarkRed));
 				title.setText(item.getTitle());
 			}
+            // setto la descrizione
 			if (description != null) {
-				description.setText(Html.fromHtml(item.getDescription().substring(0, 197)+"..."));
+                String desc = item.getDescription();
+                if(desc.length() < 197){
+                    description.setText(Html.fromHtml(desc+"..."));
+                }else{
+				    description.setText(Html.fromHtml(item.getDescription().substring(0, 197)+"..."));
+                }
 			}
+            // setto l'immagine
             if(image != null){
                 Bitmap img = item.getImage();
                 if(img != null){
