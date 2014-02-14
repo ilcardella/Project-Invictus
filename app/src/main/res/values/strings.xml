@@ -11,5 +11,6 @@
     <string name="title_section6">News</string>
     <string name="title_section7">Coaching</string>
     <string name="back">Back</string>
+    <string name="action_about">About</string>
 
 </resources>

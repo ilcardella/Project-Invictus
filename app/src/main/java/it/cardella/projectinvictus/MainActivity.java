@@ -17,6 +17,7 @@ import it.cardella.projectinvictus.data.Item;
 import it.cardella.projectinvictus.util.ItemListAdapter;
 import it.cardella.projectinvictus.util.RssReader;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -31,6 +32,7 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -71,18 +73,6 @@ public class MainActivity extends FragmentActivity {
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
 	}
-	
-	@Override
-	protected void onRestoreInstanceState(Bundle savedInstanceState) {
-		// TODO riprendere i dati salvati e aggiornare la view
-		super.onRestoreInstanceState(savedInstanceState);
-	}
-	
-	@Override
-	protected void onSaveInstanceState(Bundle outState) {
-		// TODO salvare gli items nel Bundle
-		super.onSaveInstanceState(outState);
-	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -91,7 +81,26 @@ public class MainActivity extends FragmentActivity {
 		return true;
 	}
 
-	public class SectionsPagerAdapter extends FragmentStatePagerAdapter {
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId())
+        {
+            case R.id.action_about:
+                AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+                dialog.setTitle(R.string.app_name);
+                dialog.setIcon(R.drawable.logo_launcher);
+                dialog.setMessage("App created by Alberto Cardellini.");
+                dialog.show();
+
+                return true;
+
+            case R.id.action_settings:
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    public class SectionsPagerAdapter extends FragmentStatePagerAdapter {
 
 		public SectionsPagerAdapter(FragmentManager fm) {
 			super(fm);
