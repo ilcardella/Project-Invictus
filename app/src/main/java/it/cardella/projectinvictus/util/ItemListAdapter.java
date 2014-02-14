@@ -47,7 +47,7 @@ public class ItemListAdapter extends ArrayAdapter<Item> {
 				title.setText(item.getTitle());
 			}
 			if (description != null) {
-				description.setText(Html.fromHtml(item.getDescription()));
+				description.setText(Html.fromHtml(item.getDescription().substring(0, 197)+"..."));
 			}
 		}
 		return view;
