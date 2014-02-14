@@ -12,7 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c0f11ae-3a83-4886-9136-3856bbaa28e3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/MainActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Project-Invictus.iws" />
@@ -77,41 +77,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="4" selection-start="2164" selection-end="2164" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3723">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="46" selection-start="515" selection-end="515" vertical-scroll-proportion="0.6042654" vertical-offset="0" max-vertical-offset="680">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fragment_main_dummy.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_main_dummy.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="17" selection-start="510" selection-end="510" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="612">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ItemListAdapter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/util/ItemListAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="0" selection-start="576" selection-end="576" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="1037">
-              <folding />
+            <state line="188" column="50" selection-start="6627" selection-end="6627" vertical-scroll-proportion="1.0165877" vertical-offset="2138" max-vertical-offset="2958">
+              <folding>
+                <element signature="e#3837#3871#0" expanded="true" />
+                <element signature="e#3910#3944#0" expanded="true" />
+                <element signature="e#3983#4017#0" expanded="true" />
+                <element signature="e#4056#4090#0" expanded="true" />
+                <element signature="e#4129#4163#0" expanded="true" />
+                <element signature="e#4202#4236#0" expanded="true" />
+                <element signature="e#4275#4309#0" expanded="true" />
+                <element signature="e#4959#5185#0" expanded="true" />
+                <element signature="e#5166#5167#0" expanded="true" />
+                <element signature="class#GetXMLTask#0;class#DummySectionFragment#0;class#MainActivity#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -685,8 +666,8 @@
         <option value="$PROJECT_DIR$/app/.gitignore" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_main_dummy.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -722,8 +703,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -870,6 +849,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -916,6 +897,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -941,19 +935,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -1094,7 +1075,11 @@
       <created>1392325431529</created>
       <updated>1392325431529</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="aggiunta icona, ora spacca">
+      <created>1392327360099</created>
+      <updated>1392327360099</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1133,7 +1118,7 @@
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32839838" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39703903" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39703903" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289689" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1145,8 +1130,8 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28055555" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1169,7 +1154,8 @@
     <MESSAGE value="Ho modificato come vengono scaricati gli articoli di ogni sezione, ora dentro ad ogni fragment viene lanciato il task e settato l'adapter&#10;ORa funziona" />
     <MESSAGE value="aggiunta progressbar" />
     <MESSAGE value="mi sa che funziona meglio ora" />
-    <option name="LAST_COMMIT_MESSAGE" value="mi sa che funziona meglio ora" />
+    <MESSAGE value="aggiunta icona, ora spacca" />
+    <option name="LAST_COMMIT_MESSAGE" value="aggiunta icona, ora spacca" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1177,8 +1163,37 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state line="211" column="52" selection-start="7347" selection-end="7347" vertical-scroll-proportion="0.0" vertical-offset="3587" max-vertical-offset="3859">
+          <folding>
+            <element signature="e#3837#3871#0" expanded="true" />
+            <element signature="e#3910#3944#0" expanded="true" />
+            <element signature="e#3983#4017#0" expanded="true" />
+            <element signature="e#4056#4090#0" expanded="true" />
+            <element signature="e#4129#4163#0" expanded="true" />
+            <element signature="e#4202#4236#0" expanded="true" />
+            <element signature="e#4275#4309#0" expanded="true" />
+            <element signature="e#4959#5185#0" expanded="true" />
+            <element signature="e#5166#5167#0" expanded="true" />
+            <element signature="class#GetXMLTask#0;class#DummySectionFragment#0;class#MainActivity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state line="181" column="0" selection-start="5947" selection-end="5947" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3859">
-          <folding />
+          <folding>
+            <element signature="e#3837#3871#0" expanded="true" />
+            <element signature="e#3910#3944#0" expanded="true" />
+            <element signature="e#3983#4017#0" expanded="true" />
+            <element signature="e#4056#4090#0" expanded="true" />
+            <element signature="e#4129#4163#0" expanded="true" />
+            <element signature="e#4202#4236#0" expanded="true" />
+            <element signature="e#4275#4309#0" expanded="true" />
+            <element signature="e#4959#5185#0" expanded="true" />
+            <element signature="e#5166#5167#0" expanded="true" />
+            <element signature="class#GetXMLTask#0;class#DummySectionFragment#0;class#MainActivity#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1202,7 +1217,18 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="174" column="33" selection-start="5765" selection-end="5765" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4403">
-          <folding />
+          <folding>
+            <element signature="e#3837#3871#0" expanded="true" />
+            <element signature="e#3910#3944#0" expanded="true" />
+            <element signature="e#3983#4017#0" expanded="true" />
+            <element signature="e#4056#4090#0" expanded="true" />
+            <element signature="e#4129#4163#0" expanded="true" />
+            <element signature="e#4202#4236#0" expanded="true" />
+            <element signature="e#4275#4309#0" expanded="true" />
+            <element signature="e#4959#5185#0" expanded="true" />
+            <element signature="e#5166#5167#0" expanded="true" />
+            <element signature="class#GetXMLTask#0;class#DummySectionFragment#0;class#MainActivity#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1240,7 +1266,18 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="41" column="29" selection-start="1511" selection-end="1511" vertical-scroll-proportion="0.0" vertical-offset="697" max-vertical-offset="4624">
-          <folding />
+          <folding>
+            <element signature="e#3837#3871#0" expanded="true" />
+            <element signature="e#3910#3944#0" expanded="true" />
+            <element signature="e#3983#4017#0" expanded="true" />
+            <element signature="e#4056#4090#0" expanded="true" />
+            <element signature="e#4129#4163#0" expanded="true" />
+            <element signature="e#4202#4236#0" expanded="true" />
+            <element signature="e#4275#4309#0" expanded="true" />
+            <element signature="e#4959#5185#0" expanded="true" />
+            <element signature="e#5166#5167#0" expanded="true" />
+            <element signature="class#GetXMLTask#0;class#DummySectionFragment#0;class#MainActivity#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1317,17 +1354,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="4" selection-start="2164" selection-end="2164" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3723">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="46" selection-start="515" selection-end="515" vertical-scroll-proportion="0.6042654" vertical-offset="0" max-vertical-offset="680">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-19/android.jar!/android/os/Binder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="0" selection-start="2057" selection-end="2057" vertical-scroll-proportion="0.75061125" vertical-offset="492" max-vertical-offset="901">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="188" column="50" selection-start="6627" selection-end="6627" vertical-scroll-proportion="1.0165877" vertical-offset="2138" max-vertical-offset="2958">
+          <folding>
+            <element signature="e#3837#3871#0" expanded="true" />
+            <element signature="e#3910#3944#0" expanded="true" />
+            <element signature="e#3983#4017#0" expanded="true" />
+            <element signature="e#4056#4090#0" expanded="true" />
+            <element signature="e#4129#4163#0" expanded="true" />
+            <element signature="e#4202#4236#0" expanded="true" />
+            <element signature="e#4275#4309#0" expanded="true" />
+            <element signature="e#4959#5185#0" expanded="true" />
+            <element signature="e#5166#5167#0" expanded="true" />
+            <element signature="class#GetXMLTask#0;class#DummySectionFragment#0;class#MainActivity#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

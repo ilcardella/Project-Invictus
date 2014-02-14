@@ -50,23 +50,13 @@ public class MainActivity extends FragmentActivity {
 
 	SectionsPagerAdapter mSectionsPagerAdapter;
 	ViewPager mViewPager;
-
-	ProgressDialog dialog;
 	
-	private static Map<String, List<Item>> itemsHashMap = new HashMap<String, List<Item>>();
-	
-	ItemListAdapter itemListAdapter;
+	static Map<String, List<Item>> itemsHashMap = new HashMap<String, List<Item>>();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-
-		dialog = new ProgressDialog(this);
-		dialog.setMessage("Downloading...");
-		dialog.setCancelable(false);
-		dialog.setCanceledOnTouchOutside(false);
-		//dialog.show();
 
 		// Create the adapter that will return a fragment for each of the three
 		// primary sections of the app.
@@ -144,23 +134,18 @@ public class MainActivity extends FragmentActivity {
 
 		public static final String ARG_SECTION_NUMBER = "section_number";
 		
-		private ItemListAdapter itemListAdapter;
-		private ListView listView;
-        private int position;
-        private View rootView;
-        private LinearLayout pBarLinearLayout;
+		ItemListAdapter itemListAdapter;
+		ListView listView;
+        int position;
+        View rootView;
+        LinearLayout pBarLinearLayout;
 		
 		public DummySectionFragment() {
 		}
 
-		@Override
-		public View onCreateView(LayoutInflater inflater, ViewGroup container,
-				Bundle savedInstanceState) {
-
-            rootView = inflater.inflate(R.layout.fragment_main_dummy,
-                    container, false);
-            pBarLinearLayout = (LinearLayout) rootView.findViewById(R.id.progressBarLinearLayout);
-
+        @Override
+        public void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
             position = getArguments().getInt(ARG_SECTION_NUMBER);
 
             if(!itemsHashMap.containsKey(URL_ARRAY[position])){
@@ -168,21 +153,30 @@ public class MainActivity extends FragmentActivity {
                     @Override
                     protected void onPostExecute(List<Item> items) {
                         itemsHashMap.put(URL_ARRAY[position], items);
-                        setItemListAdapter(position);
                     }
                 };
                 task.execute(URL_ARRAY[position]);
-            }else{
+            }
+        }
+
+        @Override
+		public View onCreateView(LayoutInflater inflater, ViewGroup container,
+				Bundle savedInstanceState) {
+
+            rootView = inflater.inflate(R.layout.fragment_main_dummy,
+                    container, false);
+            pBarLinearLayout = (LinearLayout) rootView.findViewById(R.id.progressBarLinearLayout);
+            listView = (ListView) rootView.findViewById(R.id.feed_listView);
+
+            if(itemsHashMap.containsKey(URL_ARRAY[position])){
                 setItemListAdapter(position);
+                updateUI();
             }
             return rootView;
 		}
 
         private void setItemListAdapter(int listPosition){
             itemListAdapter = new ItemListAdapter(getActivity(), R.layout.listview_row_layout, itemsHashMap.get(URL_ARRAY[position]));
-            listView = (ListView) rootView.findViewById(R.id.feed_listView);
-            pBarLinearLayout.setVisibility(View.GONE);
-            listView.setVisibility(View.VISIBLE);
             listView.setAdapter(itemListAdapter);
             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
@@ -196,6 +190,11 @@ public class MainActivity extends FragmentActivity {
                     startActivity(intent);
                 }
             });
+        }
+
+        private void updateUI(){
+            pBarLinearLayout.setVisibility(View.GONE);
+            listView.setVisibility(View.VISIBLE);
         }
 
         private class GetXMLTask extends
