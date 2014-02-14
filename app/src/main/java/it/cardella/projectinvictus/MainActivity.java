@@ -18,7 +18,10 @@ import it.cardella.projectinvictus.util.ItemListAdapter;
 import it.cardella.projectinvictus.util.RssReader;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -34,6 +37,7 @@ import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 public class MainActivity extends FragmentActivity {
 
@@ -150,10 +154,11 @@ public class MainActivity extends FragmentActivity {
             position = getArguments().getInt(ARG_SECTION_NUMBER);
 
             if(!itemsHashMap.containsKey(URL_ARRAY[position])){
-                GetXMLTask task = new GetXMLTask();
-                task.execute(URL_ARRAY[position]);
-                running_task = true;
+                    GetXMLTask task = new GetXMLTask();
+                    task.execute(URL_ARRAY[position]);
+                    running_task = true;
             }
+
         }
 
         @Override
@@ -224,7 +229,7 @@ public class MainActivity extends FragmentActivity {
             protected void onPostExecute(List<Item> items) {
                 itemsHashMap.put(URL_ARRAY[position], items);
                 running_task = false;
-                if(getActivity()!=null)
+                if(getActivity() != null)
                 {
                     setItemListAdapter();
                 }
@@ -252,7 +257,6 @@ public class MainActivity extends FragmentActivity {
                     }
 
                 } catch (Exception ex) {
-                    // TODO gestire la connessione a internet assente
                     ex.printStackTrace();
                 }
                 return output.toString();
@@ -262,5 +266,14 @@ public class MainActivity extends FragmentActivity {
 
 	} // Fine classe Fragment
 
+    public boolean isOnline() {
+        ConnectivityManager cm =
+                (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo netInfo = cm.getActiveNetworkInfo();
+        if (netInfo != null && netInfo.isConnectedOrConnecting()) {
+            return true;
+        }
+        return false;
+    }
 
 }// End of Activity
