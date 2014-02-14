@@ -30,8 +30,8 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: it.cardella.projectinvictus" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c0f11ae-3a83-4886-9136-3856bbaa28e3" name="Default" comment="aggiornato adapter e Data class con l'immagine bitmap, bisogna implementare la riceca delle immagini nell'asynctask. &#10;Cancellata anche la classe Items, inutilizzata">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/util/ItemListAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/util/ItemListAdapter.java" />
+    <list default="true" id="6c0f11ae-3a83-4886-9136-3856bbaa28e3" name="Default" comment="aggiunto un controllo sulla lunghezza della striga della descrizione">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/MainActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Project-Invictus.iws" />
@@ -96,10 +96,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="250" column="0" selection-start="8676" selection-end="8676" vertical-scroll-proportion="0.0" vertical-offset="3264" max-vertical-offset="4437">
+            <state line="239" column="98" selection-start="8336" selection-end="8336" vertical-scroll-proportion="0.7279597" vertical-offset="3111" max-vertical-offset="4454">
               <folding>
                 <element signature="e#2393#2413#0" expanded="true" />
                 <element signature="e#3339#3356#0" expanded="true" />
@@ -114,15 +114,6 @@
                 <element signature="e#7947#7948#0" expanded="true" />
                 <element signature="e#8227#8233#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ItemListAdapter.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/util/ItemListAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="31" selection-start="1948" selection-end="1948" vertical-scroll-proportion="0.7178841" vertical-offset="531" max-vertical-offset="1105">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -803,8 +794,8 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/listview_row_layout.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/data/Item.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/util/XMLHandler.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/util/ItemListAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -1323,7 +1314,11 @@
       <created>1392412657418</created>
       <updated>1392412657418</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="aggiunto un controllo sulla lunghezza della striga della descrizione">
+      <created>1392413113561</created>
+      <updated>1392413113561</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1409,7 +1404,8 @@
     <MESSAGE value="cancellata classe Channel non utilizzata&#10;" />
     <MESSAGE value="aggiunta l'imageview nella riga della listview" />
     <MESSAGE value="aggiornato adapter e Data class con l'immagine bitmap, bisogna implementare la riceca delle immagini nell'asynctask. &#10;Cancellata anche la classe Items, inutilizzata" />
-    <option name="LAST_COMMIT_MESSAGE" value="aggiornato adapter e Data class con l'immagine bitmap, bisogna implementare la riceca delle immagini nell'asynctask. &#10;Cancellata anche la classe Items, inutilizzata" />
+    <MESSAGE value="aggiunto un controllo sulla lunghezza della striga della descrizione" />
+    <option name="LAST_COMMIT_MESSAGE" value="aggiunto un controllo sulla lunghezza della striga della descrizione" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1746,9 +1742,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/util/ItemListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="31" selection-start="1948" selection-end="1948" vertical-scroll-proportion="0.7178841" vertical-offset="531" max-vertical-offset="1105">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="250" column="0" selection-start="8676" selection-end="8676" vertical-scroll-proportion="0.0" vertical-offset="3264" max-vertical-offset="4437">
+        <state line="239" column="98" selection-start="8336" selection-end="8336" vertical-scroll-proportion="0.7279597" vertical-offset="3111" max-vertical-offset="4454">
           <folding>
             <element signature="e#2393#2413#0" expanded="true" />
             <element signature="e#3339#3356#0" expanded="true" />
@@ -1763,13 +1766,6 @@
             <element signature="e#7947#7948#0" expanded="true" />
             <element signature="e#8227#8233#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/util/ItemListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="31" selection-start="1948" selection-end="1948" vertical-scroll-proportion="0.7178841" vertical-offset="531" max-vertical-offset="1105">
-          <folding />
         </state>
       </provider>
     </entry>

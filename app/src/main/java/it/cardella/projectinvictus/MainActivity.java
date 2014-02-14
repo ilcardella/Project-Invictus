@@ -237,6 +237,7 @@ public class MainActivity extends FragmentActivity {
             protected List<Item> doInBackground(String... urls) {
                 List<Item> items = new ArrayList<Item>();
 
+                // TODO controllare se ci sono feed in più di una pagina, nel caso scaricare tutto
                 for (String url : urls) {
                     String currentUrl = url;
                     String xml = getXmlFromUrl(url);
