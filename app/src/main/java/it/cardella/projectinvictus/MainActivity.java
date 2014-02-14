@@ -144,6 +144,7 @@ public class MainActivity extends FragmentActivity {
         View rootView;
         LinearLayout pBarLinearLayout;
         boolean running_task = false;
+        boolean isConnected = false;
 		
 		public DummySectionFragment() {
 		}
@@ -153,10 +154,16 @@ public class MainActivity extends FragmentActivity {
             super.onCreate(savedInstanceState);
             position = getArguments().getInt(ARG_SECTION_NUMBER);
 
-            if(!itemsHashMap.containsKey(URL_ARRAY[position])){
-                    GetXMLTask task = new GetXMLTask();
-                    task.execute(URL_ARRAY[position]);
-                    running_task = true;
+            if(isOnline()){
+
+                isConnected = true;
+                if(!itemsHashMap.containsKey(URL_ARRAY[position])){
+                        GetXMLTask task = new GetXMLTask();
+                        task.execute(URL_ARRAY[position]);
+                        running_task = true;
+                }
+            }else{
+                Toast.makeText(getActivity(), "Connessione Assente", Toast.LENGTH_SHORT).show();
             }
 
         }
@@ -169,10 +176,22 @@ public class MainActivity extends FragmentActivity {
                     container, false);
             pBarLinearLayout = (LinearLayout) rootView.findViewById(R.id.progressBarLinearLayout);
             listView = (ListView) rootView.findViewById(R.id.feed_listView);
-            setItemListAdapter();
+            if(isConnected){
+                setItemListAdapter();
+            }
 
             return rootView;
 		}
+
+        public boolean isOnline() {
+            ConnectivityManager cm =
+                    (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
+            NetworkInfo netInfo = cm.getActiveNetworkInfo();
+            if (netInfo != null && netInfo.isConnectedOrConnecting()) {
+                return true;
+            }
+            return false;
+        }
 
         private void setItemListAdapter(){
             if(running_task)
@@ -266,14 +285,5 @@ public class MainActivity extends FragmentActivity {
 
 	} // Fine classe Fragment
 
-    public boolean isOnline() {
-        ConnectivityManager cm =
-                (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo netInfo = cm.getActiveNetworkInfo();
-        if (netInfo != null && netInfo.isConnectedOrConnecting()) {
-            return true;
-        }
-        return false;
-    }
 
 }// End of Activity
