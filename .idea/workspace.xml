@@ -31,7 +31,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c0f11ae-3a83-4886-9136-3856bbaa28e3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/MainActivity.java" />
+      <change type="DELETED" beforePath="C:\Users\Fisso-PC\AndroidStudioProjects\Project-Invictus\app\src\main\java\it\cardella\projectinvictus\data\Channel.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Project-Invictus.iws" />
@@ -99,7 +99,7 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="230" column="9" selection-start="7993" selection-end="7993" vertical-scroll-proportion="0.59949625" vertical-offset="3009" max-vertical-offset="4420">
+            <state line="230" column="9" selection-start="7993" selection-end="7993" vertical-scroll-proportion="1.1133502" vertical-offset="2805" max-vertical-offset="4420">
               <folding>
                 <element signature="e#2393#2413#0" expanded="true" />
                 <element signature="e#3339#3356#0" expanded="true" />
@@ -1334,7 +1334,11 @@
       <created>1392410257720</created>
       <updated>1392410257720</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="tolto metodo inutilizzato updateUI()">
+      <created>1392410346048</created>
+      <updated>1392410346048</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1416,7 +1420,8 @@
     <MESSAGE value="cambiati i colori" />
     <MESSAGE value="finita la gestione della connessione assente. ora bisogna concentrarsi sulla webview e sui video" />
     <MESSAGE value="aggiunto menu About" />
-    <option name="LAST_COMMIT_MESSAGE" value="aggiunto menu About" />
+    <MESSAGE value="tolto metodo inutilizzato updateUI()" />
+    <option name="LAST_COMMIT_MESSAGE" value="tolto metodo inutilizzato updateUI()" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1724,13 +1729,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/FeedDetailActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="66" selection-start="1627" selection-end="1627" vertical-scroll-proportion="0.52369666" vertical-offset="153" max-vertical-offset="1802">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="717">
@@ -1759,9 +1757,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/FeedDetailActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="66" selection-start="1627" selection-end="1627" vertical-scroll-proportion="0.5566751" vertical-offset="153" max-vertical-offset="1802">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/it/cardella/projectinvictus/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="230" column="9" selection-start="7993" selection-end="7993" vertical-scroll-proportion="0.59949625" vertical-offset="3009" max-vertical-offset="4420">
+        <state line="230" column="9" selection-start="7993" selection-end="7993" vertical-scroll-proportion="1.1133502" vertical-offset="2805" max-vertical-offset="4420">
           <folding>
             <element signature="e#2393#2413#0" expanded="true" />
             <element signature="e#3339#3356#0" expanded="true" />
